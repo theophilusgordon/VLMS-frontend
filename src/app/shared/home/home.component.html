@@ -1,0 +1,17 @@
+<div class="home bg-light-white flex justify-center items-center gap-x-32 h-dvh">
+  <mat-card class="w-60 cursor-pointer transition-transform duration-200 hover:scale-105" (click)="navigateTo('guest')">
+    <mat-card-content class="text-center">
+      <mat-icon class="text-5xl text-dark-primary">person_outline</mat-icon>
+      <mat-card-title class="text-base text-dark-primary">Guest</mat-card-title>
+      <p class="text-dark-primary">Check in or check out</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="w-60 cursor-pointer transition-transform duration-200 hover:scale-105" (click)="navigateTo('user')">
+    <mat-card-content class="text-center">
+      <mat-icon class="text-5xl text-dark-primary">account_circle</mat-icon>
+      <mat-card-title class="text-base text-dark-primary">User</mat-card-title>
+      <p class="text-dark-primary">Login in to your account</p>
+    </mat-card-content>
+  </mat-card>
+</div>

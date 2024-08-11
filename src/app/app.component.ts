@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { RunOutsideReducedMotion } from "./utils/motion-guard";
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,8 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'vlms-frontend';
+  @RunOutsideReducedMotion
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet?.activatedRouteData?.["animation"];
+  }
 }
